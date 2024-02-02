@@ -90,7 +90,7 @@
         height: 31rem;
     }
     main::after {
-            background: linear-gradient(-330deg, #000 76%, rgba(0, 0, 0, 0) 65%) no-repeat; 
+            background: linear-gradient(-330deg, #000 25%, rgba(0, 0, 0, 0) 65%) no-repeat; 
     }
     
 }

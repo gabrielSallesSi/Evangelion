@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Personagens de Evangelion</title>
+    <link rel="icon" href="./assets/Evangelion/icon.png" type="image/x-icon">
+    <link rel="stylesheet" href="./stylles.css">
+    <link rel="stylesheet" href="./responsivo.css">
+
+    <style>
+        #minhaMusica {
+            display: none; /* Oculta os controles de áudio padrão */
+        }
+
+        #controles-customizados {
+            position: fixed;
+            top: 15px;
+            right: 36px;
+            display: flex;
+            gap: 10px;
+            align-items: center;
+            background-color: rgba(8, 4, 4, 0.5);
+            padding: 5px;
+            border-radius: 5px;
+            transition: background-color 0.3s;
+            cursor: pointer;
+            width: 160px;
+        }
+
+        #playPause {
+            width: 15px;
+            height: 15px;
+            background-color: rgb(97, 92, 86);
+            border-radius: 50%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            cursor: pointer;
+        }
+
+        #playPause:hover {
+            background-color: #ccc;
+        }
+
+        #playPause::before {
+            content: '\25B6'; /* Símbolo de "play" triangular */
+            font-size: 12px;
+        }
+
+        #playPause.playing::before {
+            content: '\||'; /* Símbolo de "pause" */
+        }
+    </style>
+</head>
+
+<body>
+    <main class="personagens">
+        <div class="character selecionado" >
+            <img src="./assets/Evangelion/Shinji-back.jpg" alt="Shinji" id="Shinji">
+            <div class="conteudo">
+                <i class="logo"></i>
+                <h2 class="name-character">Shinji Ikari</h2>
+                <p class="discretion" id="meuTexto">Shinji é o protagonista da série, um adolescente introvertido e emocionalmente vulnerável. 
+                    Ele é recrutado para pilotar o Evangelion Unidade-01, enfrentando desafios emocionais e psicológicos significativos ao longo da narrativa.
+                </p>
+            </div>
+        </div>
+
+        <div class="character">
+            <img src="./assets/Evangelion/Rei-back.png" alt="Rei" id="Rei">
+            <div class="conteudo" >
+                <i class="logo"></i>
+                <h2 class="name-character">Rei Ayanami</h2>
+                <p class="discretion" id="meuTexto1">Rei é uma personagem misteriosa e reservada. Ela pilota o Evangelion Unidade-00 e possui uma conexão única com a trama 
+                    central. Sua personalidade enigmática e relação com outros personagens adicionam complexidade à história.</p>
+            </div>
+        </div>
+
+        <div class="character">
+            <img src="./assets/Evangelion/Asuka-back.jpg"  alt="Asuka" style="transform: scaleX(-1);" id="Asuka" >            
+            <div class="conteudo">
+                <i class="logo"></i>
+                <h2 class="name-character">Asuka Langley Soryu</h2>
+                <p class="discretion" id="meuTexto2">Asuka é uma piloto alemã-japonesa que comanda o Evangelion Unidade-02. Ela é conhecida por sua personalidade 
+                    extrovertida, competitiva e por vezes arrogante. Asuka desempenha um papel crucial nos eventos da série.</p>
+                        <style>
+    </style>
+            </div>
+        </div>
+
+        <div class="character">
+            <img src="./assets/Evangelion/Misato-back.jpg" alt="Misato">
+            <div class="conteudo">
+                <i class="logo"></i>
+                <h2 class="name-character">Misato Katsuragi</h2>
+                <p class="discretion" id="meuTexto3">Misato é uma oficial da NERV encarregada de supervisionar os pilotos adolescentes, incluindo Shinji, Rei e Asuka. 
+                    Ela desempenha um papel de liderança na organização e também atua como supervisora dos pilotos, proporcionando suporte emocional.</p>
+            </div>
+        </div>
+
+        <div class="character">
+            <img src="./assets/Evangelion/Gendo-back.png" alt="Gendo">
+            <div class="conteudo">
+                <i class="logo"></i>
+                <h2 class="name-character">Gendo Ikari</h2>
+                <p class="discretion" id="meuTexto4">Gendo é o comandante da NERV e pai distante de Shinji. Ele é uma figura central nos eventos da série, desempenhando 
+                    um papel complexo e muitas vezes ambíguo. Sua relação com Shinji e sua influência na trama contribuem para a intensidade emocional da história.</p>
+            </div>
+        </div>
+
+    </main>
+    <ul class="buttons">
+        <li>
+            <button class="button selecionado">
+                <img src="./assets/Evangelion/Shinji-Ikari-Icon.jpg" alt="button-Ikari" width="90" height="85">
+            </button>
+        </li>
+        <li>
+            <button class="button">
+                <img src="./assets/Evangelion/Rei-Icon.jpg" alt="button-Rei" width="90" height="85">
+            </button>
+        </li>
+        <li>
+            <button class="button">
+                <img src="./assets/Evangelion/Asuka-Langley-Soryu-Icon.jpg" alt="button-Asuka" width="90" height="85">
+            </button>
+        </li>
+        <li>
+            <button class="button">
+                <img src="./assets/Evangelion/Misato-Katsuragi-Icon.jpg" alt="button-Misato" width="90" height="85">
+            </button>
+        <li>
+            <button class="button">
+                <img src="./assets/Evangelion/Gendo-Ikari-Icon.jpg" alt="button-Gendo" width="90" height="85">
+            </button>
+        </li>
+        </li>
+    </ul>
+    <script src="./scripts.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            document.getElementById('meuTexto').classList.add('aparecer');
+            
+        });
+                document.addEventListener('DOMContentLoaded', function() {
+            document.getElementById('meuTexto1').classList.add('aparecer');
+            
+        });
+                document.addEventListener('DOMContentLoaded', function() {
+            document.getElementById('meuTexto2').classList.add('aparecer');
+            
+        });
+                document.addEventListener('DOMContentLoaded', function() {
+            document.getElementById('meuTexto3').classList.add('aparecer');
+            
+        });
+                document.addEventListener('DOMContentLoaded', function() {
+            document.getElementById('meuTexto4').classList.add('aparecer');
+            
+        });
+
+    </script>
+    <body>
+
+        <audio id="minhaMusica" src="./assets/Evangelion/musicar.mp4"></audio>
+
+        <div id="controles-customizados">
+            <div id="playPause" onclick="togglePlayPause()"></div>
+            <input type="range" id="volume" min="0" max="1" step="0.1" value="1" oninput="alterarVolume()">
+        </div>
+    
+        <script>
+            var audio = document.getElementById('minhaMusica');
+            var playPauseButton = document.getElementById('playPause');
+    
+            function togglePlayPause() {
+                if (audio.paused) {
+                    audio.play();
+                } else {
+                    audio.pause();
+                }
+                updatePlayPauseIcon();
+            }
+    
+            function updatePlayPauseIcon() {
+                if (audio.paused) {
+                    playPauseButton.classList.remove('playing');
+                } else {
+                    playPauseButton.classList.add('playing');
+                }
+            }
+    
+            function alterarVolume() {
+                audio.volume = document.getElementById('volume').value;
+            }
+    
+            audio.addEventListener('play', updatePlayPauseIcon);
+            audio.addEventListener('pause', updatePlayPauseIcon);
+        </script>
+    
+
+</body>
+
+</html>
